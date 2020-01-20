@@ -2,3 +2,8 @@ body {
   font-family: "Century Gothic";
   padding: 20px 60px;
 }
+a {
+  text-decoration: none;
+  color: black;
+  font-size: 17px;
+}
