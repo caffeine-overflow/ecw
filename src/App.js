@@ -4,7 +4,7 @@ import Homepage from './Pages/homepage/Homepage.component'
 import ShopPage from './Pages/shop/shop.component'
 import Header from './components/header/header.component'
 import SignPage from './Pages/sign-in/sign-in-and-sign-out'
-import { auth } from './firebase/firebase.util'
+import { auth, createUserProfileDocument } from './firebase/firebase.util'
 import './App.css';
 
 
@@ -21,9 +21,8 @@ class App extends Component {
 
   componentDidMount() {
     this.unsubscribeFromAuth = auth.onAuthStateChanged(user => {
-      this.setState({ currentUser: user })
-      console.log(user);
-    })
+      createUserProfileDocument(user);
+    });
   }
 
   componentWillUnmount() {
