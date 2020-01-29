@@ -19,7 +19,7 @@ class App extends Component {
   }
 
   unsubscribeFromAuth = null;
-
+  //lifecycle
   componentDidMount() {
     this.unsubscribeFromAuth = auth.onAuthStateChanged(async user => {
       if (user) {
