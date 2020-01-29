@@ -2,11 +2,19 @@ import React from 'react'
 import './header-styles.scss'
 import { Link } from 'react-router-dom'
 import { auth } from '../../firebase/firebase.util'
+import CartIcon from '../cart-icon/cart.componenet'
+import CartDropdown from '../cart-dropdown/cartdropdown'
+import Icon from '../../assets/crown.svg'
 
-const Header = ({ currentUser }) => (
+
+const Header = ({ currentUser, showCart, showCartHandler }) => (
     <div className='header'>
-        <Link className="logo-container" to="/"></Link>
+        <Link className="logo-container" to="/">
+            <img src={Icon} className="logo" alt="logo" />
+        </Link>
         <div className="options">
+            <Link className="logo-container" to="/" >
+            </Link>
             <Link className="option" to="/shop" >SHOP</Link>
             <Link className="option" to="/shop" >CONTACT</Link>
             {
@@ -18,7 +26,11 @@ const Header = ({ currentUser }) => (
                         <Link className='option' to='/signin'>SIGN IN</Link>
                     )
             }
+            <CartIcon showCartHandler={showCartHandler} />
         </div>
+        {
+            showCart ? <CartDropdown /> : ''
+        }
     </div >
 )
 

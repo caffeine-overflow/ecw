@@ -13,7 +13,8 @@ class App extends Component {
   constructor() {
     super();
     this.state = {
-      currentUser: null
+      currentUser: null,
+      showCart: false
     }
   }
 
@@ -40,10 +41,14 @@ class App extends Component {
     this.unsubscribeFromAuth();
   }
 
+  showCartOnClick = () => {
+    this.state.showCart ? this.setState({ showCart: false }) : this.setState({ showCart: true })
+  }
+
   render() {
     return (
       <div>
-        <Header currentUser={this.state.currentUser} />
+        <Header currentUser={this.state.currentUser} showCart={this.state.showCart} showCartHandler={this.showCartOnClick} />
         <Switch>
           <Route exact path='/' component={Homepage}></Route>
           <Route exact path='/shop' component={ShopPage}></Route>
