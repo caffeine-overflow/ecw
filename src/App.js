@@ -14,7 +14,8 @@ class App extends Component {
     super();
     this.state = {
       currentUser: null,
-      showCart: false
+      showCart: false,
+      cartItems: []
     }
   }
 
@@ -45,13 +46,20 @@ class App extends Component {
     this.state.showCart ? this.setState({ showCart: false }) : this.setState({ showCart: true })
   }
 
+  addItems = (Items) => {
+    this.setState({
+      cartItems: [...this.state.cartItems, Items]
+    })
+  }
+
   render() {
+    console.log(this.state.cartItems);
     return (
       <div>
         <Header currentUser={this.state.currentUser} showCart={this.state.showCart} showCartHandler={this.showCartOnClick} />
         <Switch>
           <Route exact path='/' component={Homepage}></Route>
-          <Route exact path='/shop' component={ShopPage}></Route>
+          <Route exact path='/shop' render={() => <ShopPage addItems={this.addItems} />}></Route>
           <Route
             exact path='/signin' render={() =>
               this.state.currentUser ?
