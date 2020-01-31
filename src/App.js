@@ -47,9 +47,9 @@ class App extends Component {
   }
 
   addItems = (Items) => {
-    var list = { ...this.state.cartItems }
+    var list = [...this.state.cartItems]
     var found = false;
-    list.filter(i => {
+    list.forEach(i => {
       if (i.id === Items.id) {
         i.quanity++;
         found = true;
@@ -59,7 +59,6 @@ class App extends Component {
       Items["quanity"] = 0;
       list.push(Items);
     }
-
     this.setState({
       cartItems: [...this.state.cartItems, Items]
     })
