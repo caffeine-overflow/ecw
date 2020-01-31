@@ -51,16 +51,16 @@ class App extends Component {
     var found = false;
     list.forEach(i => {
       if (i.id === Items.id) {
-        i.quanity++;
+        i.quanity = i.quanity + 1;
         found = true;
       }
     });
     if (found === false) {
-      Items["quanity"] = 0;
+      Items["quanity"] = 1;
       list.push(Items);
     }
     this.setState({
-      cartItems: [...this.state.cartItems, Items]
+      cartItems: list
     })
   }
 
