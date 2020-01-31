@@ -47,6 +47,19 @@ class App extends Component {
   }
 
   addItems = (Items) => {
+    var list = { ...this.state.cartItems }
+    var found = false;
+    list.filter(i => {
+      if (i.id === Items.id) {
+        i.quanity++;
+        found = true;
+      }
+    });
+    if (found === false) {
+      Items["quanity"] = 0;
+      list.push(Items);
+    }
+
     this.setState({
       cartItems: [...this.state.cartItems, Items]
     })
