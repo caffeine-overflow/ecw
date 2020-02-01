@@ -4,6 +4,8 @@ import Homepage from './Pages/homepage/Homepage.component'
 import ShopPage from './Pages/shop/shop.component'
 import Header from './components/header/header.component'
 import SignPage from './Pages/sign-in/sign-in-and-sign-out'
+import CheckoutPage from './Pages/Checkout/Checkout'
+
 import { auth, createUserProfileDocument } from './firebase/firebase.util'
 import './App.css';
 
@@ -63,6 +65,29 @@ class App extends Component {
     })
   }
 
+  removeItems = (Items) => {
+    var list = [...this.state.cartItems]
+    list.forEach(i => {
+      if (i.id === Items.id) {
+        if (i.quantity > 1)
+          i.quantity = i.quantity - 1;
+        else
+          list.splice(i, 1);
+      }
+    });
+    this.setState({
+      cartItems: list
+    })
+  }
+
+  calculateTotal = () => {
+    var total = 0;
+    this.state.cartItems.forEach(i =>
+      total += (i.quantity * i.price)
+    )
+    return total;
+  }
+
   render() {
     console.log(this.state.cartItems);
     return (
@@ -76,6 +101,12 @@ class App extends Component {
         <Switch>
           <Route exact path='/' component={Homepage}></Route>
           <Route exact path='/shop' render={() => <ShopPage addItems={this.addItems} />}></Route>
+          <Route exact path='/checkout' render={() =>
+            <CheckoutPage
+              cartItems={this.state.cartItems}
+              removeItems={this.removeItems}
+              calculateTotal={this.calculateTotal}
+            />}></Route>
           <Route
             exact path='/signin' render={() =>
               this.state.currentUser ?
