@@ -7,7 +7,7 @@ import CartDropdown from '../cart-dropdown/cartdropdown'
 import Icon from '../../assets/crown.svg'
 
 
-const Header = ({ currentUser, showCart, showCartHandler }) => (
+const Header = ({ currentUser, showCart, showCartHandler, Item }) => (
     <div className='header'>
         <Link className="logo-container" to="/">
             <img src={Icon} className="logo" alt="logo" />
@@ -26,10 +26,10 @@ const Header = ({ currentUser, showCart, showCartHandler }) => (
                         <Link className='option' to='/signin'>SIGN IN</Link>
                     )
             }
-            <CartIcon showCartHandler={showCartHandler} />
+            <CartIcon showCartHandler={showCartHandler} Item={Item} />
         </div>
         {
-            showCart ? <CartDropdown /> : ''
+            showCart ? <CartDropdown Item={Item} /> : ''
         }
     </div >
 )

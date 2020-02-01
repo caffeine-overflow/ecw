@@ -7,7 +7,6 @@ import SignPage from './Pages/sign-in/sign-in-and-sign-out'
 import { auth, createUserProfileDocument } from './firebase/firebase.util'
 import './App.css';
 
-
 class App extends Component {
 
   constructor() {
@@ -51,12 +50,12 @@ class App extends Component {
     var found = false;
     list.forEach(i => {
       if (i.id === Items.id) {
-        i.quanity = i.quanity + 1;
+        i.quantity = i.quantity + 1;
         found = true;
       }
     });
     if (found === false) {
-      Items["quanity"] = 1;
+      Items["quantity"] = 1;
       list.push(Items);
     }
     this.setState({
@@ -68,7 +67,12 @@ class App extends Component {
     console.log(this.state.cartItems);
     return (
       <div>
-        <Header currentUser={this.state.currentUser} showCart={this.state.showCart} showCartHandler={this.showCartOnClick} />
+        <Header
+          currentUser={this.state.currentUser}
+          showCart={this.state.showCart}
+          showCartHandler={this.showCartOnClick}
+          Item={this.state.cartItems}
+        />
         <Switch>
           <Route exact path='/' component={Homepage}></Route>
           <Route exact path='/shop' render={() => <ShopPage addItems={this.addItems} />}></Route>
