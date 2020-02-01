@@ -13,7 +13,6 @@ const CartDropdown = ({ Item }) => (
                     : <span className='empty-message'>Your cart is empty</span>
             }
         </div>
-        <CartItem />
         <Link className="option" to="/checkout" > <CustomButton>GO TO CHECKOUT</CustomButton></Link>
     </div>
 )

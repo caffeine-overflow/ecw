@@ -2,7 +2,7 @@ import React from 'react'
 import './cart-item.styles.scss'
 
 const cartItem = ({ Item }) => (
-    Item ? <div className='cart-item'>
+    <div className='cart-item'>
         <img src={Item.imageUrl} alt='item' />
         <div className='item-details'>
             <span className='name'>{Item.name}</span>
@@ -10,7 +10,7 @@ const cartItem = ({ Item }) => (
                 {Item.quantity} x ${Item.price}
             </span>
         </div>
-    </div> : ""
+    </div>
 );
 
 export default cartItem;

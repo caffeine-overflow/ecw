@@ -106,6 +106,8 @@ class App extends Component {
               cartItems={this.state.cartItems}
               removeItems={this.removeItems}
               calculateTotal={this.calculateTotal}
+              showCart={this.state.showCart}
+              showCartHandler={this.showCartOnClick}
             />}></Route>
           <Route
             exact path='/signin' render={() =>
