@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import SHOP_DATA from './Shopdata'
-import CollectionPreview from '../../components/preview-collections/PreviewCollection.component'
+import CollectionPreviews from '../../components/collection-preview/collection-preview'
 
 class ShopPage extends Component {
     constructor(props) {
@@ -10,14 +10,21 @@ class ShopPage extends Component {
         };
     }
     render() {
+        var shopdata = [];
+        var showCount = 10;
+        if (this.props.category === "main") {
+            shopdata = this.state.collections;
+            showCount = 4;
+        }
+        else if (this.props.category === "hats") shopdata = [this.state.collections[0]];
+        else if (this.props.category === "sneakers") shopdata = [this.state.collections[1]];
+        else if (this.props.category === "jackets") shopdata = [this.state.collections[2]];
+        else if (this.props.category === "womens") shopdata = [this.state.collections[3]];
+        else if (this.props.category === "mens") shopdata = [this.state.collections[4]];
+        else shopdata = this.state.collections;
+
         return (
-            <div className="shop-page">
-                {
-                    this.state.collections.map(c =>
-                        <CollectionPreview key={c.id} collectionArray={c} />
-                    )
-                }
-            </div>
+            <CollectionPreviews shopdata={shopdata} addItems={this.props.addItems} showCount={showCount} />
         );
     }
 }
