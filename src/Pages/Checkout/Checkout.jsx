@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './checkout.styles.scss'
 import CheckoutItem from '../../components/checkout.component/checkout-item'
+import StripeButton from '../../components/stripe-payments/stripe-button'
 
 
 class CheckoutPage extends Component {
@@ -15,6 +16,7 @@ class CheckoutPage extends Component {
     render() {
         if (this.props.showCart === true)
             this.props.showCartHandler();
+        const total = this.props.calculateTotal();
         return (
             < div className='checkout-page' >
                 <div className='checkout-header'>
@@ -46,7 +48,19 @@ class CheckoutPage extends Component {
                     ))
                 }
 
-                <div className='total'>TOTAL: ${this.props.calculateTotal()}</div>
+                <div className='total'>TOTAL: ${total}</div>
+                {
+                    total > 0 ?
+                        <div className='test-warning'>
+                            Please use the following test credit card for payments <br />
+                            5555555555554444	Mastercard	Any 3 digits	Any future date
+                            </div>
+                        : ''
+                }
+                {
+                    total > 0 ?
+                        <StripeButton total={total} resetCart={this.props.resetCart} /> : ''
+                }
             </div >
         )
     }

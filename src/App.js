@@ -92,6 +92,12 @@ class App extends Component {
     })
   }
 
+  resetCart = () => {
+    this.setState({
+      cartItems: []
+    })
+  }
+
 
   calculateTotal = () => {
     var total = 0;
@@ -128,6 +134,7 @@ class App extends Component {
               showCartHandler={this.showCartOnClick}
               addItems={this.addItems}
               deleteItems={this.deleteItems}
+              resetCart={this.resetCart}
             />}></Route>
           <Route
             exact path='/signin' render={() =>
