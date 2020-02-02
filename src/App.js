@@ -80,6 +80,19 @@ class App extends Component {
     })
   }
 
+  deleteItems = (Items) => {
+    var list = [...this.state.cartItems]
+    list.forEach(i => {
+      if (i.id === Items.id) {
+        list.splice(i, 1);
+      }
+    });
+    this.setState({
+      cartItems: list
+    })
+  }
+
+
   calculateTotal = () => {
     var total = 0;
     this.state.cartItems.forEach(i =>
@@ -108,6 +121,8 @@ class App extends Component {
               calculateTotal={this.calculateTotal}
               showCart={this.state.showCart}
               showCartHandler={this.showCartOnClick}
+              addItems={this.addItems}
+              deleteItems={this.deleteItems}
             />}></Route>
           <Route
             exact path='/signin' render={() =>

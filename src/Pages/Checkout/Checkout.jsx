@@ -36,7 +36,13 @@ class CheckoutPage extends Component {
                 </div>
                 {
                     this.props.cartItems.map(i => (
-                        <CheckoutItem key={i.id} cartItem={i} removeItems={this.props.removeItems} />
+                        <CheckoutItem
+                            key={i.id}
+                            cartItem={i}
+                            removeItems={this.props.removeItems}
+                            addItems={this.props.addItems}
+                            deleteItems={this.props.deleteItems}
+                        />
                     ))
                 }
 
