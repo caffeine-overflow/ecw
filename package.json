@@ -8,7 +8,6 @@
     "@testing-library/user-event": "^7.2.1",
     "axios": "^0.19.2",
     "concurrently": "^5.1.0",
-    "cors": "^2.8.5",
     "express": "^4.17.1",
     "firebase": "^7.7.0",
     "mongoose": "^5.8.11",
@@ -57,5 +56,6 @@
   "bugs": {
     "url": "https://github.com/popcornn95/ecw/issues"
   },
-  "homepage": "https://github.com/popcornn95/ecw#readme"
+  "homepage": "https://github.com/popcornn95/ecw#readme",
+  "proxy": "http://localhost:8080"
 }

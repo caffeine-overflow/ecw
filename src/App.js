@@ -110,7 +110,7 @@ class App extends Component {
   }
 
   getUser = () => {
-    axios.get('http://localhost:8080/api')
+    axios.get('/api')
       .then((response) => {
         const datas = response.data;
         this.setState({ data: datas })
@@ -122,6 +122,7 @@ class App extends Component {
   componentDidMount = () => {
     this.getUser();
   }
+
   render() {
     console.log(this.state.data);
     return (

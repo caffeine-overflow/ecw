@@ -2,7 +2,6 @@ const express = require('express')
 const mongoose = require('mongoose')
 const morgan = require('morgan')
 const path = require('path')
-const cors = require('cors')
 
 const app = express();
 const port = process.env.port || 8080;
@@ -29,8 +28,6 @@ mongoose.connection.on('connected', () => {
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
-//Take care of  http8080 request on 3000 port for the react
-app.use(cors());
 /*-----------------------------------------------------------------------------------------------------*/
 app.use('/', routes);
 app.listen(port, console.log(`Server is starting at ${port}`))
