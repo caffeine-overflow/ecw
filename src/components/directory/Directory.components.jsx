@@ -15,10 +15,10 @@ class Directory extends Component {
                         linkUrl: 'shop/hats'
                     },
                     {
-                        title: 'JACKETS',
+                        title: 'SWEATERS',
                         imageUrl: 'https://i.ibb.co/px2tCc3/jackets.png',
                         id: 2,
-                        linkUrl: 'shop/jackets'
+                        linkUrl: 'shop/sweaters'
                     },
                     {
                         title: 'SNEAKERS',

@@ -68,7 +68,10 @@ const SHOP_DATA = [
             {
                 id: 11,
                 name: 'Adidas NMD',
-                imageUrl: 'https://i.ibb.co/0s3pdnc/adidas-nmd.png',
+                imageUrl: [
+                    { "id": 1, "image": 'https://i.ibb.co/0s3pdnc/adidas-nmd.png' },
+                    { "id": 2, "image": 'https://i.ibb.co/dJbG1cT/yeezy.png' }
+                ],
                 price: 220
             },
             {
@@ -117,37 +120,116 @@ const SHOP_DATA = [
     },
     {
         id: 3,
-        title: 'Jackets',
-        routeName: 'jackets',
+        title: 'SWEATERS',
+        routeName: 'sweaters',
         items: [
+            {
+                id: 20,
+                name: 'Brown Shearling',
+                imageUrl: [
+                    { "id": 1, "image": 'https://i.imgur.com/KkpAx1E.jpgg' },
+                    { "id": 2, "image": 'https://i.imgur.com/dWbkjJD.jpg' }
+                ],
+                price: 165
+            },
+
             {
                 id: 21,
                 name: 'Black Jean Shearling',
-                imageUrl: 'https://i.ibb.co/XzcwL5s/black-shearling.png',
+                imageUrl: [
+                    { "id": 1, "image": 'https://i.imgur.com/DK7Axbm.jpg' },
+                    { "id": 2, "image": 'https://i.imgur.com/gqGmC6B.jpg' }
+                ],
                 price: 125
             },
             {
                 id: 22,
                 name: 'Blue Jean Jacket',
-                imageUrl: 'https://i.ibb.co/mJS6vz0/blue-jean-jacket.png',
+                imageUrl: [
+                    { "id": 1, "image": 'https://i.imgur.com/nkLCaWB.jpg' },
+                    { "id": 2, "image": 'https://i.imgur.com/HQq1cQS.jpg' }
+                ],
                 price: 90
             },
             {
                 id: 23,
                 name: 'Grey Jean Jacket',
-                imageUrl: 'https://i.ibb.co/N71k1ML/grey-jean-jacket.png',
+                imageUrl: [
+                    { "id": 1, "image": 'https://i.imgur.com/YsuBc6z.jpg' },
+                    { "id": 2, "image": 'https://i.imgur.com/TSJMMOp.jpg' }
+                ],
                 price: 90
-            },
-            {
-                id: 24,
-                name: 'Brown Shearling',
-                imageUrl: 'https://i.ibb.co/s96FpdP/brown-shearling.png',
-                price: 165
             },
             {
                 id: 25,
                 name: 'Tan Trench',
-                imageUrl: 'https://i.ibb.co/M6hHc3F/brown-trench.png',
+                imageUrl: [
+                    { "id": 1, "image": 'https://i.imgur.com/jEnPBD5.jpg' },
+                    { "id": 2, "image": 'https://i.imgur.com/BfVrxjr.jpg' }
+                ],
+                price: 185
+            },
+            {
+                id: 26,
+                name: 'Tan Trench',
+                imageUrl: [
+                    { "id": 1, "image": 'https://i.imgur.com/CGDlRcg.jpg' },
+                    { "id": 2, "image": 'https://i.imgur.com/rRHN7R7.jpg' }
+                ],
+                price: 185
+            },
+            {
+                id: 27,
+                name: 'Tan Trench',
+                imageUrl: [
+                    { "id": 1, "image": 'https://i.imgur.com/eq7NFCb.jpg' },
+                    { "id": 2, "image": 'https://i.imgur.com/qxeKgQM.jpg' }
+                ],
+                price: 185
+            },
+            {
+                id: 28,
+                name: 'Tan Trench',
+                imageUrl: [
+                    { "id": 1, "image": 'https://i.imgur.com/3oc3bRi.jpg' },
+                    { "id": 2, "image": 'https://i.imgur.com/Pw9QSWs.jpg' }
+                ],
+                price: 185
+            },
+            {
+                id: 29,
+                name: 'Tan Trench',
+                imageUrl: [
+                    { "id": 1, "image": 'https://i.imgur.com/bGCAXK8.jpg' },
+                    { "id": 2, "image": 'https://i.imgur.com/McA4GHI.jpg' }
+                ],
+                price: 185
+            },
+            {
+                id: 200,
+                name: 'Black Jean Shearling',
+                imageUrl: [
+                    { "id": 1, "image": 'https://i.imgur.com/xvD4Ans.jpg' },
+                    { "id": 2, "image": 'https://i.imgur.com/nStnvth.jpg' }
+                ],
+                price: 125
+            },
+            {
+                id: 201,
+                name: 'Tan Trench',
+                imageUrl: [
+                    { "id": 1, "image": 'https://i.imgur.com/sZEvTXS.jpg' },
+                    { "id": 2, "image": 'https://i.imgur.com/Ci8LoVt.jpg' }
+                ],
+                price: 185
+            },
+            {
+                id: 202,
+                name: 'Tan Trench',
+                imageUrl: [
+                    { "id": 1, "image": 'https://i.imgur.com/1oyPvfT.jpg' },
+                    { "id": 2, "image": 'https://i.imgur.com/0aljnnP.jpg    ' }
+                ],
                 price: 185
             }
         ]

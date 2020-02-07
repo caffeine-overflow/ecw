@@ -138,7 +138,7 @@ class App extends Component {
           <Route exact path='/shop' render={() => <ShopPage addItems={this.addItems} category="main" />}></Route>
           <Route exact path='/shop/hats' render={() => <ShopPage addItems={this.addItems} category="hats" />}></Route>
           <Route exact path='/shop/sneakers' render={() => <ShopPage addItems={this.addItems} category="sneakers" />}></Route>
-          <Route exact path='/shop/jackets' render={() => <ShopPage addItems={this.addItems} category="jackets" />}></Route>
+          <Route exact path='/shop/sweaters' render={() => <ShopPage addItems={this.addItems} category="sweaters" />}></Route>
           <Route exact path='/shop/womens' render={() => <ShopPage addItems={this.addItems} category="womens" />}></Route>
           <Route exact path='/shop/mens' render={() => <ShopPage addItems={this.addItems} category="mens" />}></Route>
 

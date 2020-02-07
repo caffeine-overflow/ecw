@@ -11,14 +11,14 @@ class ShopPage extends Component {
     }
     render() {
         var shopdata = [];
-        var showCount = 10;
+        var showCount = 30;
         if (this.props.category === "main") {
             shopdata = this.state.collections;
             showCount = 4;
         }
         else if (this.props.category === "hats") shopdata = [this.state.collections[0]];
         else if (this.props.category === "sneakers") shopdata = [this.state.collections[1]];
-        else if (this.props.category === "jackets") shopdata = [this.state.collections[2]];
+        else if (this.props.category === "sweaters") shopdata = [this.state.collections[2]];
         else if (this.props.category === "womens") shopdata = [this.state.collections[3]];
         else if (this.props.category === "mens") shopdata = [this.state.collections[4]];
         else shopdata = this.state.collections;
