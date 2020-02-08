@@ -9,36 +9,36 @@ class Directory extends Component {
             sections:
                 [
                     {
-                        title: 'HATS',
-                        imageUrl: 'https://i.ibb.co/cvpntL1/hats.png',
+                        title: 'BLAZERS',
+                        imageUrl: 'https://i.imgur.com/cdjDUOM.jpg',
                         id: 1,
-                        linkUrl: 'shop/hats'
+                        size: 'large',
+                        linkUrl: 'shop/blazers'
                     },
                     {
                         title: 'SWEATERS',
-                        imageUrl: 'https://i.ibb.co/px2tCc3/jackets.png',
+                        imageUrl: 'https://i.imgur.com/CGDlRcg.jpg',
+                        size: 'large',
                         id: 2,
                         linkUrl: 'shop/sweaters'
                     },
                     {
-                        title: 'SNEAKERS',
-                        imageUrl: 'https://i.ibb.co/0jqHpnp/sneakers.png',
+                        title: 'DENIM',
+                        imageUrl: 'https://i.imgur.com/AkJTNXp.jpg',
                         id: 3,
-                        linkUrl: 'shop/sneakers'
+                        linkUrl: 'shop/denim'
                     },
                     {
-                        title: 'WOMENS',
-                        imageUrl: 'https://i.ibb.co/GCCdy8t/womens.png',
-                        size: 'large',
+                        title: 'CARDIGANS',
+                        imageUrl: 'https://i.imgur.com/sJla1PC.jpg',
                         id: 4,
-                        linkUrl: 'shop/womens'
+                        linkUrl: 'shop/cardigans'
                     },
                     {
-                        title: 'MENS',
-                        imageUrl: 'https://i.ibb.co/R70vBrQ/men.png',
-                        size: 'large',
+                        title: 'FLORAL',
+                        imageUrl: 'https://i.imgur.com/LlzCs4z.jpg',
                         id: 5,
-                        linkUrl: 'shop/mens'
+                        linkUrl: 'shop/floral'
                     }
                 ]
         }

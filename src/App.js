@@ -136,11 +136,11 @@ class App extends Component {
         <Switch>
           <Route exact path='/' component={Homepage}></Route>
           <Route exact path='/shop' render={() => <ShopPage addItems={this.addItems} category="main" />}></Route>
-          <Route exact path='/shop/hats' render={() => <ShopPage addItems={this.addItems} category="hats" />}></Route>
-          <Route exact path='/shop/sneakers' render={() => <ShopPage addItems={this.addItems} category="sneakers" />}></Route>
+          <Route exact path='/shop/blazers' render={() => <ShopPage addItems={this.addItems} category="blazers" />}></Route>
+          <Route exact path='/shop/denim' render={() => <ShopPage addItems={this.addItems} category="denim" />}></Route>
           <Route exact path='/shop/sweaters' render={() => <ShopPage addItems={this.addItems} category="sweaters" />}></Route>
-          <Route exact path='/shop/womens' render={() => <ShopPage addItems={this.addItems} category="womens" />}></Route>
-          <Route exact path='/shop/mens' render={() => <ShopPage addItems={this.addItems} category="mens" />}></Route>
+          <Route exact path='/shop/cardigans' render={() => <ShopPage addItems={this.addItems} category="cardigans" />}></Route>
+          <Route exact path='/shop/floral' render={() => <ShopPage addItems={this.addItems} category="floral" />}></Route>
 
           <Route exact path='/checkout' render={() =>
             <CheckoutPage
