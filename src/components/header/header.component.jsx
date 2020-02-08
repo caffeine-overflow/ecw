@@ -16,7 +16,7 @@ const Header = ({ currentUser, showCart, showCartHandler, Item }) => (
             <Link className="logo-container" to="/" >
             </Link>
             <Link className="option" to="/shop" >SHOP</Link>
-            <Link className="option" to="/shop" >CONTACT</Link>
+            <Link className="option" to="/checkout" >CHECKOUT</Link>
             {
                 currentUser ?
                     (
@@ -29,7 +29,7 @@ const Header = ({ currentUser, showCart, showCartHandler, Item }) => (
             <CartIcon showCartHandler={showCartHandler} Item={Item} />
         </div>
         {
-            showCart ? <CartDropdown Item={Item} /> : ''
+            showCart ? <CartDropdown Item={Item} showCartHandler={showCartHandler} /> : ''
         }
     </div >
 )

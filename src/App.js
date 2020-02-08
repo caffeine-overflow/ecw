@@ -50,6 +50,7 @@ class App extends Component {
   }
 
   addItems = (Items) => {
+    if (this.state.showCart === false) this.setState({ showCart: true })
     var list = [...this.state.cartItems]
     var found = false;
     list.forEach(i => {

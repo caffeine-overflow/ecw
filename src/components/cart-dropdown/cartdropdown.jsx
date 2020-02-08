@@ -3,8 +3,9 @@ import { Link } from 'react-router-dom'
 import './cart-dropdown.styles.scss'
 import CustomButton from '../custom-button/custom-button'
 import CartItem from '../cart-item/cart-item'
-const CartDropdown = ({ Item }) => (
+const CartDropdown = ({ Item, showCartHandler }) => (
     <div className="cart-dropdown">
+        <div className="close" onClick={showCartHandler}>X</div>
         <div className="cart-items">
             {
                 Item.length > 0 ? (

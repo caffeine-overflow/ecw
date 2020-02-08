@@ -8,7 +8,7 @@ const CartIcon = ({ showCartHandler, Item }) => {
     return (
         <div className="cart-icon">
             <img src={Logo} className="shopping-icon" alt="logo" onClick={showCartHandler} />
-            <span className="item-count">{count}</span>
+            <span className="item-count" onClick={showCartHandler}>{count}</span>
         </div>
     )
 }

@@ -23,6 +23,16 @@
 
     & .content {
       opacity: 0.7;
+
+      .title {
+        font-weight: normal;
+        font-size: 10px;
+      }
+
+      .subtitle {
+        font-weight: bold;
+        font-size: 22px;
+      }
     }
   }
 
@@ -41,7 +51,7 @@
   }
 
   .content {
-    height: 90px;
+    height: 80px;
     padding: 0 25px;
     display: flex;
     flex-direction: column;
