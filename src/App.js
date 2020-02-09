@@ -5,7 +5,6 @@ import ShopPage from './Pages/shop/shop.component'
 import Header from './components/header/header.component'
 import SignPage from './Pages/sign-in/sign-in-and-sign-out'
 import CheckoutPage from './Pages/Checkout/Checkout'
-import axios from 'axios'
 
 import { auth, createUserProfileDocument } from './firebase/firebase.util'
 import './App.css';
@@ -110,22 +109,7 @@ class App extends Component {
     return total;
   }
 
-  getUser = () => {
-    axios.get('/api')
-      .then((response) => {
-        const datas = response.data;
-        this.setState({ data: datas })
-        console.log("PASSSED")
-      })
-      .catch(() => console.log("ERROR"))
-  }
-
-  componentDidMount = () => {
-    this.getUser();
-  }
-
   render() {
-    console.log(this.state.data);
     return (
       <div>
         <Header

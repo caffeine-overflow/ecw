@@ -59,7 +59,7 @@ class CheckoutPage extends Component {
                 }
                 {
                     total > 0 ?
-                        <StripeButton total={total} resetCart={this.props.resetCart} /> : ''
+                        <StripeButton total={total} resetCart={this.props.resetCart} cartItems={this.props.cartItems} /> : ''
                 }
             </div >
         )
