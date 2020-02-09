@@ -18,7 +18,7 @@ class CollectionItem extends Component {
                 />
                 <div className="collection-footer">
                     <span className='name'>{this.props.item.name}</span>
-                    <span className='price'>{this.props.item.price}</span>
+                    <span className='price'>${this.props.item.price}</span>
                 </div>
                 <CustomButton onClick={() => this.props.addItems(this.props.item)} inverted>Add to Cart</CustomButton>
             </div>
