@@ -53,7 +53,8 @@ class CheckoutPage extends Component {
                     total > 0 ?
                         <div className='test-warning'>
                             Please use the following test credit card for payments <br />
-                            5555555555554444	Mastercard	Any 3 digits	Any future date
+                            5555555555554444 Mastercard
+                            <br />CVC - Any 3 digits | Expiration -Any future date
                             </div>
                         : ''
                 }

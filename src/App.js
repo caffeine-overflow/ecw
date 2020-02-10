@@ -5,6 +5,7 @@ import ShopPage from './Pages/shop/shop.component'
 import Header from './components/header/header.component'
 import SignPage from './Pages/sign-in/sign-in-and-sign-out'
 import CheckoutPage from './Pages/Checkout/Checkout'
+import Footer from './components/footer-component/footer'
 
 import { auth, createUserProfileDocument } from './firebase/firebase.util'
 import './App.css';
@@ -151,6 +152,7 @@ class App extends Component {
             }
           />
         </Switch>
+        <Footer />
       </div >
     )
   }

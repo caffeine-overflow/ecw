@@ -42,14 +42,16 @@
     display: flex;
     align-items: center;
     justify-content: flex-end;
+    background-image: linear-gradient(to right, rgba(255, 0, 0, 0), #e2e0d3);
 
     .option {
       padding: 10px 15px;
       font-weight: 500;
-      font-size: 17px;
+      font-size: 19px;
+      font-family: 'Philosopher', sans-serif;
 
       &:hover {
-        background-color: #e2e0d3;
+        font-weight: bold;
       }
 
     }
